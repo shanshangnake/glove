@@ -8,16 +8,15 @@
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
 		"noFallthroughCasesInSwitch": true,
-		"noUncheckedSideEffectImports": true
+		"noUncheckedSideEffectImports": true,
+
+		"paths": {
+			"@com": ["./src/components"],
+			"@com/*": ["./src/components/*"],
+			"@constant": ["./src/constant"],
+			"@constant/*": ["./src/constant/*"],
+			"@assets": ["./src/assets"]
+		}
 	},
-	"include": [
-		"src/**/*.ts",
-		"src/**/*.tsx",
-		"src/**/*.vue",
-		"documents/Segmented.vue",
-		"documents/Slider2.vue",
-		"documents/Slider3.vue",
-		"documents/Slider4.vue",
-		"documents/Slider5.vue"
-	]
+	"include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"]
 }

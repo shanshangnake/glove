@@ -1,13 +1,22 @@
-<script setup>
-import { computed, ref } from 'vue';
-import { networkOptions } from './constant';
+<script setup lang="ts">
+import Button from '@com/Button.vue';
+import Modal from '@com/Modal.vue';
+import { ref } from 'vue';
 
-import HelloWorld from './components/HelloWorld.vue';
-import Segmented from './components/Segmented.vue';
+const show = ref(false);
+
+const connectWallet = () => {
+	show.value = true;
+};
+
+const modalCancel = () => {
+	show.value = false;
+};
 </script>
 
 <template>
-	<Segmented default-value="Tron" :options="networkOptions" class="h-[60px] w-[220px]" />
+	<Button text="connect wallet" class="w-[300px]" :onclick="connectWallet" />
+	<Modal :show="show" :onCancel="modalCancel" />
 </template>
 
 <style scoped></style>

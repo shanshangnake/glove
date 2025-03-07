@@ -55,8 +55,6 @@ const onChangeHandle = (v: T, index: number) => {
 };
 
 onMounted(() => {
-	console.log('test', defaultValue || options[0].value);
-
 	const defaultValueIndex = options.findIndex(i => i.value === defaultValue);
 	activeIndex.value = defaultValueIndex !== -1 ? defaultValueIndex : 0;
 });

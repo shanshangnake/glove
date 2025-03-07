@@ -1,6 +1,9 @@
 @import 'tailwindcss';
 
 @theme {
+	--color-regal-blue: #243c5a;
+	--color-primary: #52c791;
+
 	--shadow-item: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -65,10 +68,13 @@ button:focus-visible {
 }
 
 #app {
-	max-width: 1280px;
+	width: 100%;
+	height: 100vh;
+	position: relative;
 	margin: 0 auto;
 	padding: 2rem;
 	text-align: center;
+	/* background-color: #535bf2; */
 }
 
 @media (prefers-color-scheme: light) {
