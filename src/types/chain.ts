@@ -19,3 +19,5 @@ export interface Chain {
 	addressUrl: string;
 	network: string;
 }
+
+export type Account = { path: string; address: string; publicKey?: string; xpub?: string };
