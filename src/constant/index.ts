@@ -7,6 +7,40 @@ import btcTestPng from '@assets/icons/btcTest.png';
 import ethTestPng from '@assets/icons/ethTest.png';
 import tronTestPng from '@assets/icons/tronTest.png';
 import bnbTestPng from '@assets/icons/bnbTest.png';
+import ledger from '@assets/icons/ledger.svg';
+import tronLink from '@assets/icons/tronlink.png';
+import metamask from '@assets/icons/metamask.svg';
+import ok from '@assets/icons/ok.svg';
+import oneKey from '@assets/icons/oneKey.svg';
+
+export const walletMap = {
+	[ChainFamilyType.BTC]: [
+		{
+			name: 'ledger',
+			icon: ledger,
+		},
+	],
+	[ChainFamilyType.EVM]: [
+		{
+			name: 'MetaMask',
+			icon: metamask,
+		},
+		{
+			name: 'OKX Wallet',
+			icon: ok,
+		},
+		{
+			name: 'OneKey',
+			icon: oneKey,
+		},
+	],
+	[ChainFamilyType.TRON]: [
+		{
+			name: 'TronLink',
+			icon: tronLink,
+		},
+	],
+};
 
 export const networkOptions: { label: string; value: NetworkType }[] = [
 	{

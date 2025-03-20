@@ -21,3 +21,4 @@ export interface Chain {
 }
 
 export type Account = { path: string; address: string; publicKey?: string; xpub?: string };
+export type WalletName = 'ledger' | 'MetaMask' | 'OKX Wallet' | 'OneKey' | 'TronLink';

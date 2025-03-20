@@ -10,7 +10,7 @@ export type ProviderItem = {
 		rdns: string;
 	};
 	provider: any;
-}[];
+};
 
 export enum EvmPluginWalletType {
 	MetaMask = 'io.metamask',
@@ -52,7 +52,7 @@ export type EIP712TypedData = {
 
 export type SignedEthTxData = { hash: string; signature: string };
 
-export const getPluginProvides = (intervalTimeout = 1000) => {
+export const getPluginProvides = async (intervalTimeout = 1000): Promise<ProviderItem[]> => {
 	return new Promise(resolve => {
 		const providers = new Map<string, ProviderItem>();
 		let timeoutId: any;
